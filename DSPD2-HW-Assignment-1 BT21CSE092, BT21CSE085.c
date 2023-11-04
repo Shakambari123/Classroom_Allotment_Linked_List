@@ -680,7 +680,21 @@ struct classrooms *merge(struct classrooms *lptr, struct classrooms *nptr)
     return result;
 }
 
-struct classrooms *divide(struct classrooms *lptr)
+/* Corresponding code slow fast
+Node* fast;
+    Node* slow;
+    slow = source;
+    fast = source->next;
+ 
+   
+    while (fast != NULL) {
+        fast = fast->next;
+        if (fast != NULL) {
+            slow = slow->next;
+            fast = fast->next;
+        }
+    }*/
+struct classrooms *divide(struct classrooms *lptr) //if number of nodes are even, then exact half will happen else more than half goes to left half .
 {
     struct classrooms *fast, *slow, *nptr;
     slow = lptr;
