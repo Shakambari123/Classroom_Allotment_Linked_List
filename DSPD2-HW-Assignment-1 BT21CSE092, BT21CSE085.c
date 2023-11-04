@@ -63,7 +63,7 @@ struct classrooms
     struct classrooms *next;
 };
 
-void addcourse(struct courses **first, char *Cname, int CNum, int SlotNum) // to update a new course
+void addcourse(struct courses **first, char *Cname, int CNum, int SlotNum) // to update a new course in courses linked list
 {
     // Insert new item at start.
 
